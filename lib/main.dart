@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'api_service.dart';
 import 'registration_page.dart';
-import 'thread.dart';
+import 'createthread.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -81,8 +81,7 @@ class _PostRequestDemoState extends State<PostRequestDemo> {
                       SnackBar(content: Text('Response: ${response.toString()}')),
                     );
                     Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => ThreadPage()));
-
+                                MaterialPageRoute(builder: (context) => Create_ThreadPage(username,password)));
 
                 } catch (e) {
                     setState(() {
